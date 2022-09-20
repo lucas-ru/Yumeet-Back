@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "villes",
+  "info": {
+    "singularName": "ville",
+    "pluralName": "villes",
+    "displayName": "Ville",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "codepostal": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "adresse": {
+      "type": "text"
+    },
+    "livraison": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::livraison.livraison",
+      "inversedBy": "ville"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "ville"
+    }
+  }
+}

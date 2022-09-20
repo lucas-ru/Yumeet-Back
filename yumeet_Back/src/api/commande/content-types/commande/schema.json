@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commandes",
+  "info": {
+    "singularName": "commande",
+    "pluralName": "commandes",
+    "displayName": "Commande",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "suivi": {
+      "type": "text"
+    },
+    "montant_total": {
+      "type": "decimal"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "ligne_commande": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ligne-commande.ligne-commande",
+      "inversedBy": "commandes"
+    },
+    "facture": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::facture.facture",
+      "mappedBy": "commande"
+    },
+    "livraison": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::livraison.livraison",
+      "mappedBy": "commande"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "livraisons",
+  "info": {
+    "singularName": "livraison",
+    "pluralName": "livraisons",
+    "displayName": "Livraison",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "commande": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::commande.commande",
+      "inversedBy": "livraison"
+    },
+    "ville": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ville.ville",
+      "mappedBy": "livraison"
+    }
+  }
+}
