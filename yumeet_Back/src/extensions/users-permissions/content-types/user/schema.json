@@ -91,7 +91,11 @@
       "inversedBy": "users"
     },
     "type": {
-      "type": "string"
+      "type": "enumeration",
+      "enum": [
+        "meeters",
+        "cookers"
+      ]
     }
   }
 }
