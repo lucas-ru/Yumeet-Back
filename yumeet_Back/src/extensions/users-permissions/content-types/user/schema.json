@@ -89,6 +89,9 @@
       "relation": "manyToOne",
       "target": "api::ville.ville",
       "inversedBy": "users"
+    },
+    "type": {
+      "type": "string"
     }
   }
 }
