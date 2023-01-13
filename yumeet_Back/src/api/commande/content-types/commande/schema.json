@@ -21,12 +21,6 @@
     "date": {
       "type": "datetime"
     },
-    "ligne_commande": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::ligne-commande.ligne-commande",
-      "inversedBy": "commandes"
-    },
     "facture": {
       "type": "relation",
       "relation": "oneToOne",
@@ -37,6 +31,12 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::livraison.livraison",
+      "mappedBy": "commande"
+    },
+    "ligne_commandes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ligne-commande.ligne-commande",
       "mappedBy": "commande"
     }
   }

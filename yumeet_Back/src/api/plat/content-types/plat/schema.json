@@ -21,7 +21,7 @@
     "prix": {
       "type": "decimal"
     },
-    "alllergenes": {
+    "allergenes": {
       "type": "text"
     },
     "poids": {
@@ -47,6 +47,9 @@
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "mappedBy": "plats"
+    },
+    "link_image": {
+      "type": "string"
     }
   }
 }

@@ -24,11 +24,16 @@
       "target": "api::panier.panier",
       "mappedBy": "ligne_commande"
     },
-    "commandes": {
+    "plat": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "oneToOne",
+      "target": "api::plat.plat"
+    },
+    "commande": {
+      "type": "relation",
+      "relation": "manyToOne",
       "target": "api::commande.commande",
-      "mappedBy": "ligne_commande"
+      "inversedBy": "ligne_commandes"
     }
   }
 }
