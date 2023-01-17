@@ -42,11 +42,10 @@
       "target": "api::image.image",
       "mappedBy": "plat"
     },
-    "users_permissions_users": {
+    "users_permissions_user": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "plugin::users-permissions.user",
-      "mappedBy": "plats"
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
     },
     "link_image": {
       "type": "string"
