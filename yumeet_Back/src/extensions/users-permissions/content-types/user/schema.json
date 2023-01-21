@@ -72,19 +72,17 @@
       "target": "api::facture.facture",
       "mappedBy": "users_permissions_user"
     },
-<<<<<<< HEAD
     "plats": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::plat.plat",
       "inversedBy": "users_permissions_users"
-=======
+    },
     "panier": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::panier.panier",
       "inversedBy": "users_permissions_user"
->>>>>>> 9834cb5bf8884e61f1cd17c8cc12da404ebd8c22
     },
     "ville": {
       "type": "relation",
@@ -98,12 +96,6 @@
         "meeters",
         "cookers"
       ]
-    },
-    "panier": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::panier.panier",
-      "inversedBy": "users_permissions_user"
     }
   }
 }
