@@ -74,9 +74,9 @@
     },
     "plats": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToOne",
       "target": "api::plat.plat",
-      "inversedBy": "users_permissions_users"
+      "inversedBy": "users_permissions_user"
     },
     "panier": {
       "type": "relation",
