@@ -18,11 +18,17 @@
       "target": "api::ligne-commande.ligne-commande",
       "inversedBy": "paniers"
     },
+    "plats": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::plat.plat",
+      "mappedBy": "panier"
+    },
     "users_permissions_user": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
-      "mappedBy": "panier"
+      "inversedBy": "panier"
     }
   }
 }
