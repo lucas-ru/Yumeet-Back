@@ -49,12 +49,6 @@
     },
     "link_image": {
       "type": "string"
-    },
-    "panier": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::panier.panier",
-      "inversedBy": "plats"
     }
   }
 }

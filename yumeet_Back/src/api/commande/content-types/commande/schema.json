@@ -33,11 +33,10 @@
       "target": "api::livraison.livraison",
       "mappedBy": "commande"
     },
-    "ligne_commandes": {
+    "panier": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::ligne-commande.ligne-commande",
-      "mappedBy": "commande"
+      "relation": "oneToOne",
+      "target": "api::panier.panier"
     }
   }
 }

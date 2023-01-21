@@ -15,24 +15,15 @@
     "quantite": {
       "type": "integer"
     },
-    "commission": {
-      "type": "decimal"
-    },
-    "paniers": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::panier.panier",
-      "mappedBy": "ligne_commande"
-    },
     "plat": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::plat.plat"
     },
-    "commande": {
+    "panier": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::commande.commande",
+      "target": "api::panier.panier",
       "inversedBy": "ligne_commandes"
     }
   }

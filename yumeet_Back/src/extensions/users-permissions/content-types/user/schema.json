@@ -78,12 +78,6 @@
       "target": "api::plat.plat",
       "inversedBy": "users_permissions_user"
     },
-    "panier": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::panier.panier",
-      "inversedBy": "users_permissions_user"
-    },
     "ville": {
       "type": "relation",
       "relation": "manyToOne",
@@ -96,6 +90,12 @@
         "meeters",
         "cookers"
       ]
+    },
+    "paniers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::panier.panier",
+      "mappedBy": "users_permissions_user"
     }
   }
 }

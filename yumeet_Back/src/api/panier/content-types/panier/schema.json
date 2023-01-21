@@ -12,23 +12,22 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "ligne_commande": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::ligne-commande.ligne-commande",
-      "inversedBy": "paniers"
-    },
-    "plats": {
+    "ligne_commandes": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::plat.plat",
+      "target": "api::ligne-commande.ligne-commande",
       "mappedBy": "panier"
     },
     "users_permissions_user": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "panier"
+      "inversedBy": "paniers"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": false
     }
   }
 }
