@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+
+  yumeet:
+    container_name: yumeet
+    build:
+      context: .
+    networks:
+      - traefik
+    environment:
+      - PORT=80
+    labels:
+      - "traefik.enable=true"
+
+      - "traefik.http.services.yumeet.loadbalancer.server.port=80"
+
+      - "traefik.http.routers.yumeet.entrypoints=websecure"
+      - "traefik.http.routers.yumeet.rule=Host(`yumeetapi.anquetil.org`)"
+      - "traefik.http.routers.yumeet.tls=true"
+      - "traefik.http.routers.yumeet.tls.certresolver=letsencrypt"
+
+
+networks:
+  traefik:
+    external: true
